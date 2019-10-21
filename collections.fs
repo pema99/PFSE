@@ -2,13 +2,13 @@ namespace PFSE
 
 module Collections = 
   module List =     
-    let select (pred: 'T -> bool) (lst: 'T list) =
-      lst |> List.tryPick (fun x -> if pred x then Some(x) else None)
-
+    let pairwise lst =
+      lst
+        |> Seq.pairwise
+        |> List.ofSeq
+    
   module Array =
-    let select (pred: 'T -> bool) (arr: 'T []) =
-      arr |> Array.tryPick (fun x -> if pred x then Some(x) else None)
-
-  module Seq =
-    let select (pred: 'T -> bool) (seq: 'T []) =
-      seq |> Seq.tryPick (fun x -> if pred x then Some(x) else None)
+    let pairwise arr =
+      arr
+        |> Seq.pairwise
+        |> Array.ofSeq
