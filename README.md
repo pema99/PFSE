@@ -13,4 +13,5 @@ Probably don't use this in production unless you for some reason trust me. Yeet 
 | result.fs      | Extensions for the severely lacking Result type and corresponding module. |
 | tryParse.fs    | Functional wrappers for TryParse methods.                                 |
 | collections.fs | Extensions for built in collections.                                      |
+| pair.fs        | Extensions for working with pairs (tuples N2)                             |
 | prelude.fs     | Other unclassified stuff you probably want.                               |
